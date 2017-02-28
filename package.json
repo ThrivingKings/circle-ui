@@ -1,0 +1,35 @@
+{
+  "name": "circle-ui",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "scripts": {
+    "build:dist": "NODE_ENV=production webpack -p",
+    "build": "NODE_ENV=production babel src --out-dir lib && yarn build:dist",
+    "lint": "standard src/",
+    "pretest": "standard src/",
+    "start": "NODE_ENV=development babel --watch src --out-dir lib & webpack --colors --watch",
+    "start:browser": "NODE_ENV=development ./node_modules/webpack/bin/webpack.js --watch --config browser.webpack.config.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "glamor": "^2.20.22",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "standard": "^8.6.0",
+    "webpack": "2.2.0"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  }
+}

@@ -1,0 +1,5 @@
+src
+browser
+docs
+*.log
+*.config.js

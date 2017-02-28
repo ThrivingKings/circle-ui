@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+.demo:first-child h4 {
+  margin-top: 0;
+}
+
+.demo-component * {
+  margin-right: 10px;
+}
