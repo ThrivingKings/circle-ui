@@ -4,5 +4,5 @@
 
 <h1 align="center">Circle UI</h1>
 <p align="center">
-  A completely self-contained user interface for React.
+  A collection of self-contained React components.
 </p>
