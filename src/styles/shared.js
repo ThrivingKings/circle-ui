@@ -3,7 +3,10 @@ import { css } from 'glamor'
 import {
   standardBorder,
   formBorderColor,
-  formTransitionSpeed
+  formTransitionSpeed,
+  dangerColor,
+  warningColor,
+  successColor
 } from './variables'
 
 module.exports = {
@@ -14,5 +17,19 @@ module.exports = {
     outline: 'none',
     padding: 5,
     transition: `border-color ${formTransitionSpeed}, border-bottom-color ${formTransitionSpeed}`
-  })
+  }),
+  textInputState: ({ isSuccess, isError, isWarning }) => css(
+    isSuccess && {
+      borderColor: `rgb(${successColor})`,
+      backgroundColor: `rgba(${successColor}, 0.2)`
+    },
+    isWarning && {
+      borderColor: `rgb(${warningColor})`,
+      backgroundColor: `rgba(${warningColor}, 0.2)`
+    },
+    isError && {
+      borderColor: `rgb(${dangerColor})`,
+      backgroundColor: `rgba(${dangerColor}, 0.2)`
+    }
+  )
 }

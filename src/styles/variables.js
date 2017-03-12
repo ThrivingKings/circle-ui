@@ -9,6 +9,7 @@ module.exports = {
   disabledColor: '149, 165, 166',
   dangerColor: '231, 76, 60',
   warningColor: '241, 196, 15',
+  successColor: '26, 188, 156',
 
   textColor: '#333',
   linkColor: '#1abc9c',

@@ -4,14 +4,16 @@ import { css } from 'glamor'
 import { animated } from '../styles/variables'
 import animations from '../styles/animations'
 
-const Animate = ({ name, seconds, children }) => (
+const Animate = ({ name, seconds, iterate, children, ...props }) => (
   <div
     { ...css(
         animated,
         styles.animation(name),
-        styles.duration(seconds)
+        styles.duration(seconds),
+        styles.iteration(iterate)
       )
-    } >
+    }
+    { ...props } >
 
     { children }
   </div>
@@ -33,6 +35,9 @@ const styles = {
   }),
   duration: seconds => css({
     animationDuration: `${seconds}s`
+  }),
+  iteration: iterate => css({
+    animationIterationCount: iterate
   })
 }
 

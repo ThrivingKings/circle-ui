@@ -1,13 +1,17 @@
 import React from 'react'
-import { css, focus } from 'glamor'
+import { compose, css, focus } from 'glamor'
 
-import { textInput } from '../../styles/shared'
+import { textInput as textInputStyles, textInputState } from '../../styles/shared'
 import { primaryColor } from '../../styles/variables'
 
 const Input = props => (
   <input
-    { ...textInput }
-    { ...styles.input }
+    { ...compose(
+        textInputStyles,
+        styles.input,
+        textInputState(props)
+      )
+    }
     { ...props } />
 )
 
