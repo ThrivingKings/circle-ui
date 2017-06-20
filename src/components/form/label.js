@@ -2,7 +2,7 @@ import React from 'react'
 import { css } from 'glamor'
 
 const Label = ({ children, ...props }) => (
-  <label { ...styles.label } { ...props }>
+  <label {...styles.label} {...props}>
     { children }
   </label>
 )

@@ -1,14 +1,14 @@
-import React, { Component, PropTypes } from 'react'
+import React, { PropTypes } from 'react'
 import { css } from 'glamor'
 
 import { boxShadow, transitionSpeed } from '../styles/variables'
 
 const Menu = ({ children, width, label, anchor }, { isExpanded, toggleExpanded }) => (
-  <div { ...styles.menuContainer }>
-    <div onClick={toggleExpanded} { ...styles.label }>
+  <div {...styles.menuContainer}>
+    <div onClick={toggleExpanded} {...styles.label}>
       { label }
     </div>
-    <div { ...styles.menu(isExpanded, width, anchor) }>
+    <div {...styles.menu(isExpanded, width, anchor)}>
       { children }
     </div>
   </div>
@@ -39,7 +39,7 @@ const styles = {
     transformOrigin: 'top',
     transform: isExpanded ? 'scaleY(1)' : 'scaleY(0)',
     overflow: 'hidden',
-    boxShadow,
+    boxShadow
   }),
   menuContainer: css({
     height: '100%',

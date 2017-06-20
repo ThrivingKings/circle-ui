@@ -1,5 +1,5 @@
 import React from 'react'
-import { storiesOf, action } from '@kadira/storybook'
+import { storiesOf } from '@kadira/storybook'
 
 import { Layout } from '../src'
 const { Navbar, Content, Paper } = Layout
@@ -11,7 +11,7 @@ storiesOf('Layout', module)
   .add('Navbar', () => (
     <Layout>
       <Navbar>
-        <Item><img src={imageFile} style={{ height: 40 }}/></Item>
+        <Item><img src={imageFile} style={{ height: 40 }} /></Item>
         <Item><b>Package browser</b></Item>
       </Navbar>
     </Layout>

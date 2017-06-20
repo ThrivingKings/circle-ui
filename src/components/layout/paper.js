@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { css } from 'glamor'
 
 import { boxShadow } from '../../styles/variables'
 
 const Paper = ({ children }) => (
-  <div { ...styles.paper }>
+  <div {...styles.paper}>
     { children }
   </div>
 )

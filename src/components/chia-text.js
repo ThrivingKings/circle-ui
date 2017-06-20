@@ -24,7 +24,7 @@ export default class ChiaText extends Component {
     const { width, maxFontSize, minFontSize } = this.state
     const textContent = findDOMNode(this).textContent
 
-    const modifier = Math.floor( (textContent.length / width) / .1 ) * .5
+    const modifier = Math.floor((textContent.length / width) / 0.1) * 0.5
     const newFontSize = Math.max(maxFontSize - modifier, minFontSize)
 
     this.setState({ fontSize: newFontSize })
@@ -35,14 +35,14 @@ export default class ChiaText extends Component {
 
   render () {
     const { fontSize } = this.state
-    const { maxFontSize, minFontSize, onUpdate, ...props } = this.props
+    const { maxFontSize, minFontSize, onUpdate, ...props } = this.props // eslint-disable-line
 
     return (
       <div
-        { ...props }
+        {...props}
         contentEditable
         onKeyUp={this.handleKeyUp}
-        { ...styles.text(fontSize) } />
+        {...styles.text(fontSize)} />
     )
   }
 }

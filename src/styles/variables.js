@@ -27,5 +27,5 @@ module.exports = {
   // Viewport sizes
   largeViewportWidth: '1025px',
   mediumViewportWidth: '1024px',
-  smallViewportWidth: '768px',
+  smallViewportWidth: '768px'
 }
