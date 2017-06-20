@@ -31,7 +31,7 @@ class Layout extends Component {
     const { children, ...props } = this.props
     const { navbarPadding } = this.state
     return (
-      <div { ...styles.layout(navbarPadding) } { ...props }>
+      <div {...styles.layout(navbarPadding)} {...props}>
         { children }
       </div>
     )

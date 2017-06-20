@@ -1,5 +1,5 @@
 import React from 'react'
-import { storiesOf, action } from '@kadira/storybook'
+import { storiesOf } from '@kadira/storybook'
 
 import { Form, Button, Layout } from '../src'
 const { Group, Label, Input, Textarea } = Form
@@ -10,7 +10,7 @@ storiesOf('Form', module)
     <Layout>
       <Content>
         <Paper>
-          <form style={{width:400}}>
+          <form style={{width: 400}}>
             <Group>
               <Label>Name</Label>
               <Input />
@@ -18,12 +18,12 @@ storiesOf('Form', module)
 
             <Group>
               <Label>Last name</Label>
-              <Input placeholder="A single initial is acceptable" />
+              <Input placeholder='A single initial is acceptable' />
             </Group>
             <Group>
               <Textarea />
             </Group>
-            <Group flexDirection="row">
+            <Group flexDirection='row'>
               <Button>submit</Button>
             </Group>
           </form>

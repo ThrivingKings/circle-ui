@@ -6,14 +6,13 @@ import animations from '../styles/animations'
 
 const Animate = ({ name, seconds, iterate, children, ...props }) => (
   <div
-    { ...css(
-        animated,
-        styles.animation(name),
-        styles.duration(seconds),
-        styles.iteration(iterate)
-      )
-    }
-    { ...props } >
+    {...css(
+      animated,
+      styles.animation(name),
+      styles.duration(seconds),
+      styles.iteration(iterate)
+    )}
+    {...props} >
 
     { children }
   </div>

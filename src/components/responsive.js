@@ -14,11 +14,11 @@ const Responsive = ({
 
   children
 }) => (
-  <div { ...css(
-          isDesktopHidden && styles.desktopHidden,
-          isTabletHidden && styles.tabletHidden,
-          isMobileHidden && styles.mobileHidden
-        ) }>
+  <div {...css(
+    isDesktopHidden && styles.desktopHidden,
+    isTabletHidden && styles.tabletHidden,
+    isMobileHidden && styles.mobileHidden
+  )}>
 
     { children }
   </div>

@@ -2,7 +2,7 @@ import React from 'react'
 import { css } from 'glamor'
 
 const Group = ({ children, flexDirection }) => (
-  <div role="group" { ...styles.group(flexDirection) }>
+  <div role='group' {...styles.group(flexDirection)}>
     { children }
   </div>
 )

@@ -5,12 +5,12 @@ import variables from '../styles/variables'
 
 const Button = ({ children, color, shape, ...props }) => (
   <button
-    { ...css(
-        styles.button,
-        styles.buttonColor(color),
-        styles.buttonShape(shape)
-      ) }
-    { ...props } >
+    {...css(
+      styles.button,
+      styles.buttonColor(color),
+      styles.buttonShape(shape)
+    )}
+    {...props} >
 
     { children }
   </button>
@@ -38,9 +38,9 @@ const styles = {
     userSelect: 'none'
   }),
   buttonColor: color => css({
-    backgroundColor: `rgba(${ variables[`${color}Color`] }, 0.85)`
+    backgroundColor: `rgba(${variables[`${color}Color`]}, 0.85)`
   }, hover({
-    backgroundColor: `rgba(${ variables[`${color}Color`] }, 1)`
+    backgroundColor: `rgba(${variables[`${color}Color`]}, 1)`
   }), active({
     backgroundColor: `rgba(${variables[`${color}Color`]}, 1)`,
     boxShadow: 'inset 0px 1px 3px rgba(0, 0, 0, 0.5)',
@@ -49,7 +49,7 @@ const styles = {
     outline: 'none'
   })),
   buttonShape: shape => css({
-    borderRadius: shape === 'pill' ? 100 : variables.standardBorderRadius,
+    borderRadius: shape === 'pill' ? 100 : variables.standardBorderRadius
   })
 }
 

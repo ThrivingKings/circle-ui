@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { css } from 'glamor'
 
 const Content = ({ children }) => (
-  <div { ...styles.content }>
+  <div {...styles.content}>
     { children }
   </div>
 )

@@ -2,13 +2,13 @@ import React, { PropTypes } from 'react'
 import { css } from 'glamor'
 
 const Columns = ({ children }) => (
-  <div { ...styles.columns }>
+  <div {...styles.columns}>
     { children }
   </div>
 )
 
 const Column = ({ children, maxWidth, grow, shrink }) => (
-  <div { ...styles.column(maxWidth) }>
+  <div {...styles.column(maxWidth)}>
     { children }
   </div>
 )

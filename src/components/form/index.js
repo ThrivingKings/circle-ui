@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Input from './input'
 import Group from './group'
 import Label from './label'

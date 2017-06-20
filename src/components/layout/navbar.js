@@ -13,7 +13,7 @@ class Navbar extends Component {
 
   render () {
     return (
-      <nav { ...styles.navbar }>
+      <nav {...styles.navbar}>
         { this.props.children }
       </nav>
     )
@@ -26,12 +26,12 @@ Navbar.contextTypes = {
 
 const NavbarMenu = props => (
   <Expandable>
-    <Menu { ...props } />
+    <Menu {...props} />
   </Expandable>
 )
 
 const Item = ({ children, grow, ...props }) => (
-  <div { ...styles.item(grow) } { ...props }>
+  <div {...styles.item(grow)} {...props}>
     { children }
   </div>
 )
@@ -41,7 +41,7 @@ Item.propTypes = {
 }
 
 const MenuItem = ({ children, ...props }) => (
-  <div { ...styles.menuItem } { ...props }>
+  <div {...styles.menuItem} {...props}>
     { children }
   </div>
 )

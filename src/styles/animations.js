@@ -20,7 +20,7 @@ export default {
     }
   }),
   flash: keyframes({
-   'from, 50%, to': {
+    'from, 50%, to': {
       opacity: 1
     },
     '25%, 75%': {
