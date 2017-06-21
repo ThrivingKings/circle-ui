@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { css } from 'glamor'
 
-import { boxShadow, transitionSpeed } from '../styles/variables'
+import { navbarBorder, transitionSpeed } from '../styles/variables'
 
 const Menu = ({ children, width, label, anchor }, { isExpanded, toggleExpanded }) => (
   <div {...styles.menuContainer}>
@@ -39,7 +39,8 @@ const styles = {
     transformOrigin: 'top',
     transform: isExpanded ? 'scaleY(1)' : 'scaleY(0)',
     overflow: 'hidden',
-    boxShadow
+    border: `1px solid ${navbarBorder}`,
+    borderTop: 'none'
   }),
   menuContainer: css({
     height: '100%',

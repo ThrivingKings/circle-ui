@@ -7,29 +7,28 @@ const Columns = ({ children }) => (
   </div>
 )
 
-const Column = ({ children, maxWidth, grow, shrink }) => (
-  <div {...styles.column(maxWidth)}>
+const Column = ({ children, maxWidth, flexGrow = 'initial', flexShrink = 'initial' }) => (
+  <div {...styles.column(maxWidth, flexGrow, flexShrink)}>
     { children }
   </div>
 )
 
 Column.propTypes = {
   maxWidth: PropTypes.string,
-  grow: PropTypes.bool,
-  shrink: PropTypes.bool
+  flexGrow: PropTypes.bool,
+  flexShrink: PropTypes.bool
 }
 
 const styles = {
-  column: (maxWidth, grow, shrink) => css({
-    flexGrow: grow ? 1 : 'initial',
-    flexShrink: shrink ? 1 : 'initial',
+  column: (maxWidth, flexGrow, flexShrink) => css({
+    flexGrow,
+    flexShrink,
     height: '100%',
     width: '100%',
     maxWidth
   }),
   columns: css({
     display: 'flex',
-    flexDirection: 'column',
     height: '100%',
     width: '100%'
   })
