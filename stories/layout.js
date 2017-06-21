@@ -21,6 +21,19 @@ storiesOf('Layout', module)
       </Navbar>
     </Layout>
   ))
+  .add('Navbar with tray menu', () => (
+    <Layout>
+      <Navbar>
+        <Item><img src={imageFile} style={{ height: 40 }} /></Item>
+        <Item><b>Package browser</b></Item>
+        <Item grow />
+        <Tray label='Tray menu' anchor='right'>
+          <MenuItem>Plain item</MenuItem>
+          <MenuItem><a href='#'>Link item</a></MenuItem>
+        </Tray>
+      </Navbar>
+    </Layout>
+  ))
   .add('Content alone', () => (
     <Layout>
       <Content>

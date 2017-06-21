@@ -3,6 +3,7 @@ import { css, hover, select } from 'glamor'
 
 import Expandable from '../expandable'
 import Menu from '../menu'
+import Tray from './tray'
 
 import { navbarBg, navbarHoverBg, navbarBorder, linkColor } from '../../styles/variables'
 
@@ -32,7 +33,9 @@ const NavbarMenu = props => (
   </div>
 )
 
+const NavbarTray = props => (
   <Expandable>
+    <Tray {...props} />
   </Expandable>
 )
 
@@ -89,4 +92,5 @@ const styles = {
 Navbar.Menu = NavbarMenu
 Navbar.Item = Item
 Navbar.MenuItem = MenuItem
+Navbar.Tray = NavbarTray
 export default Navbar

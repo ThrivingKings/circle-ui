@@ -6,6 +6,8 @@ module.exports = {
   navbarBorder: '#ecf0f1',
   navbarHoverBg: '#fafafa',
 
+  trayBg: '#fdfdfd',
+
   primaryColor: '52, 152, 219',
   disabledColor: '149, 165, 166',
   dangerColor: '231, 76, 60',
