@@ -1,9 +1,12 @@
 module.exports = {
-  defaultBg: '#ecf0f1',
+  defaultBg: 'white',
   defaultFont: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif',
 
-  navbarBg: '26, 188, 156',
-  boxShadow: '1px 1px 0px rgba(0, 0, 0, 0.1)',
+  navbarBg: '255, 255, 255',
+  navbarBorder: '#ecf0f1',
+  navbarHoverBg: '#fafafa',
+
+  trayBg: '#fdfdfd',
 
   primaryColor: '52, 152, 219',
   disabledColor: '149, 165, 166',
@@ -12,7 +15,7 @@ module.exports = {
   successColor: '26, 188, 156',
 
   textColor: '#333',
-  linkColor: '#1abc9c',
+  linkColor: '#0f77ff',
 
   standardBorder: '1px solid',
   standardBorderRadius: '3px',

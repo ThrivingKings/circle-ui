@@ -16,6 +16,8 @@ class Layout extends Component {
     this.state = {
       navbarPadding: 0
     }
+
+    css.global('html, body', { padding: 0, margin: 0 })
   }
 
   getChildContext = () => ({

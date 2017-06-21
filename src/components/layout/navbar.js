@@ -3,8 +3,9 @@ import { css, hover, select } from 'glamor'
 
 import Expandable from '../expandable'
 import Menu from '../menu'
+import Tray from './tray'
 
-import { navbarBg, linkColor } from '../../styles/variables'
+import { navbarBg, navbarHoverBg, navbarBorder, linkColor } from '../../styles/variables'
 
 class Navbar extends Component {
   componentDidMount () {
@@ -25,8 +26,16 @@ Navbar.contextTypes = {
 }
 
 const NavbarMenu = props => (
+  <div {...styles.menu}>
+    <Expandable>
+      <Menu {...props} />
+    </Expandable>
+  </div>
+)
+
+const NavbarTray = props => (
   <Expandable>
-    <Menu {...props} />
+    <Tray {...props} />
   </Expandable>
 )
 
@@ -54,7 +63,7 @@ const styles = {
     right: 0,
     height: 60,
     backgroundColor: `rgb(${navbarBg})`,
-    color: 'white',
+    borderBottom: `1px solid ${navbarBorder}`,
     display: 'flex',
     alignItems: 'center'
   }),
@@ -65,6 +74,10 @@ const styles = {
     color: 'inherit',
     textDecoration: 'none'
   })),
+  menu: css({
+    padding: '0 15px',
+    height: '100%'
+  }),
   menuItem: css({
     padding: 15,
     color: linkColor
@@ -72,12 +85,12 @@ const styles = {
     textDecoration: 'none',
     color: 'inherit'
   }), hover({
-    backgroundColor: `rgba(${navbarBg}, 0.6)`,
-    color: 'white'
+    backgroundColor: navbarHoverBg
   }))
 }
 
 Navbar.Menu = NavbarMenu
 Navbar.Item = Item
 Navbar.MenuItem = MenuItem
+Navbar.Tray = NavbarTray
 export default Navbar
