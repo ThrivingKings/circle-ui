@@ -2,6 +2,8 @@
   "name": "circle-ui",
   "version": "1.0.0",
   "main": "./dist/index.js",
+  "repository": "https://github.com/ThrivingKings/circle-ui",
+  "description": "A collection of self-contained React components.",
   "license": "MIT",
   "files": [
     "dist",
@@ -12,7 +14,8 @@
     "build": "NODE_ENV=production babel src --out-dir lib && yarn build:dist",
     "lint": "standard",
     "start": "NODE_ENV=development babel --watch src --out-dir lib & webpack --colors --watch",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "prepublish": "yarn run build"
   },
   "devDependencies": {
     "@kadira/storybook": "^2.35.3",
