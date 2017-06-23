@@ -1,6 +1,6 @@
 {
   "name": "circle-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./dist/index.js",
   "repository": "https://github.com/ThrivingKings/circle-ui",
   "description": "A collection of self-contained React components.",
@@ -10,7 +10,7 @@
     "lib"
   ],
   "scripts": {
-    "build:dist": "NODE_ENV=production webpack -p",
+    "build:dist": "NODE_ENV=production webpack",
     "build": "NODE_ENV=production babel src --out-dir lib && yarn build:dist",
     "lint": "standard",
     "start": "NODE_ENV=development babel --watch src --out-dir lib & webpack --colors --watch",
@@ -30,6 +30,7 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "standard": "^8.6.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "2.2.0"
   },
   "standard": {

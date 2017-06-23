@@ -1,4 +1,5 @@
 const webpack = require('webpack')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const NODE_ENV = process.env.NODE_ENV || 'production'
 
 module.exports = {
@@ -21,6 +22,9 @@ module.exports = {
     ]
   },
   plugins: [
+    NODE_ENV === 'production' && new UglifyJSPlugin({
+      comments: false
+    }),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV
