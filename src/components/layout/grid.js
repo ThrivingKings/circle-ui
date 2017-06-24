@@ -21,8 +21,8 @@ const Column = ({
 
 Column.propTypes = {
   maxWidth: PropTypes.string,
-  flexGrow: PropTypes.bool,
-  flexShrink: PropTypes.bool
+  flexGrow: PropTypes.string,
+  flexShrink: PropTypes.string
 }
 
 const styles = {
