@@ -1,8 +1,8 @@
 import React from 'react'
 import { css } from 'glamor'
 
-const Paper = ({ children }) => (
-  <div {...styles.paper}>
+const Paper = ({ children, ...props }) => (
+  <div {...styles.paper} {...props}>
     { children }
   </div>
 )
