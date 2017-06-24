@@ -1,14 +1,20 @@
 import React, { PropTypes } from 'react'
 import { css } from 'glamor'
 
-const Columns = ({ children }) => (
-  <div {...styles.columns}>
+const Columns = ({ children, ...props }) => (
+  <div {...styles.columns} {...props}>
     { children }
   </div>
 )
 
-const Column = ({ children, maxWidth, flexGrow = 'initial', flexShrink = 'initial' }) => (
-  <div {...styles.column(maxWidth, flexGrow, flexShrink)}>
+const Column = ({
+  children,
+  maxWidth,
+  flexGrow = 'initial',
+  flexShrink = 'initial',
+  ...props
+}) => (
+  <div {...styles.column(maxWidth, flexGrow, flexShrink)} {...props}>
     { children }
   </div>
 )

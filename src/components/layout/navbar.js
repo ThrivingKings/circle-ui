@@ -13,9 +13,10 @@ class Navbar extends Component {
   }
 
   render () {
+    const { children, ...props } = this.props
     return (
-      <nav {...styles.navbar}>
-        { this.props.children }
+      <nav {...styles.navbar} {...props}>
+        {children}
       </nav>
     )
   }
