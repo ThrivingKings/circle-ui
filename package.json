@@ -1,6 +1,6 @@
 {
   "name": "circle-ui",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "./dist/index.js",
   "repository": "https://github.com/ThrivingKings/circle-ui",
   "description": "A collection of self-contained React components.",
