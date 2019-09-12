@@ -1,5 +1,5 @@
 import React from 'react'
-import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@storybook/react'
 
 import { Form, Button, Layout } from '../src'
 const { Group, Label, Input, Textarea } = Form

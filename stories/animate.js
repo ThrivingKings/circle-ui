@@ -1,6 +1,6 @@
 import React from 'react'
 import { css } from 'glamor'
-import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@storybook/react'
 
 import { Animate } from '../src'
 
