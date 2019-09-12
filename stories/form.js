@@ -10,7 +10,7 @@ storiesOf('Form', module)
     <Layout>
       <Content>
         <Paper>
-          <form style={{width: 400}}>
+          <form style={{ width: 400 }}>
             <Group>
               <Label>Name</Label>
               <Input />

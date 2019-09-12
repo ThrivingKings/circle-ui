@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { keyframes } from 'glamor'
 
 export default {

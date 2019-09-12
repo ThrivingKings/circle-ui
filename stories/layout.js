@@ -2,10 +2,10 @@ import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 
 import { Layout } from '../src'
-const { Navbar, Content, Paper, Columns, Column } = Layout
-const { Item, Menu, MenuItem, Tray } = Navbar
 
 import imageFile from '../docs/assets/logo.png'
+const { Navbar, Content, Paper, Columns, Column } = Layout
+const { Item, Menu, MenuItem, Tray } = Navbar
 
 storiesOf('Layout', module)
   .add('Navbar with drop menu', () => (
